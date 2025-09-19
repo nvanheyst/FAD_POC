@@ -20,3 +20,34 @@ In terminals other than the Gazebo Simulation:
 ```bash
 source ~/FAD_POC/setup.bash #or add to ~/.bashrc
 ```
+
+## How to start NAV2 Slam Toolbox Slam Demo
+
+Terminal 1:
+
+```bash
+source ~/FAD_POC/setup.bash
+ros2 launch clearpath_gz simulation.launch.py setup_path:=$HOME/FAD_POC
+```
+
+Terminal 2: 
+```bash
+source ~/FAD_POC/setup.bash
+ros2 launch clearpath_nav2_demos slam.launch.py use_sim_time:=true setup_path:=$HOME/FAD_POC
+```
+
+Terminal 3: (RVIZ Option)
+```bash
+source ~/FAD_POC/setup.bash
+ros2 launch clearpath_viz view_navigation.launch.py namespace:=do150_0000 use_sim_time:=true
+```
+
+Terminal 3 (Foxglove alternative)
+```bash
+source ~/FAD_POC/setup.bash
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml 
+```
+
+This how it should look (although Foxglove and RVIZ are alternatives):
+
+![alt text](image.png)
