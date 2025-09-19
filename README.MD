@@ -16,7 +16,8 @@ If you are having issues with networking you can use the following command to ge
 ros2 run clearpath_generator_common generate_bash -s ~/FAD_POC
 ```
 
-In terminals other than the Gazebo Simulation:
+Make sure that your ROS2 networking is setup properly:
+
 ```bash
 source ~/FAD_POC/setup.bash #or add to ~/.bashrc
 ```
