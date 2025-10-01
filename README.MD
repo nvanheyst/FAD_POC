@@ -9,6 +9,12 @@ At the moment I have attached a configuration "robot.yaml" to use with the Clear
 
 https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/overview
 
+To download:
+
+```bash
+git clone https://github.com/nvanheyst/FAD_POC.git
+```
+
 
 If you are having issues with networking you can use the following command to generate a setup.bash file but it's also recommended to remove any ROS2 networking lines from your ~/.bashrc. 
 
