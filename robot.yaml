@@ -11,7 +11,7 @@ system:
       implementation: rmw_fastrtps_cpp
       #discovery: server
       #servers:
-      #  - hostname: cpr-dozer
+      #  - hostname: cpr-do150-0000
 
 sensors:
   lidar2d:

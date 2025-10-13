@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="do150-0000">
+
+  <!-- Common -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/common.urdf.xacro"/>
+
+  <xacro:include filename="do150.gazebo.xacro" />
+
+  <!-- Platform -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/do150/do150.urdf.xacro"/>
+  <xacro:do150 control="omni_4wd" front_wheels="mecanum" rear_wheels="mecanum"/>
+
+
+  <!-- Attachments -->
+
+
+  <!-- Links -->
+
+
+  <!-- Mounts -->
+
+
+  <!-- Sensors -->
+
+  <!-- lidar2d_0 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/hokuyo_ust.urdf.xacro"/>
+  <xacro:hokuyo_ust name="lidar2d_0" parent_link="base_link" ang_res="0.5" min_ang="-3.141592653589793" max_ang="3.141592653589793" min_range="0.05" max_range="25.0" update_rate="40">
+    <origin xyz="0.2 0.0 0.07" rpy="0.0 0.0 0.0"/>
+  </xacro:hokuyo_ust>
+
+
+  <!-- Manipulators -->
+
+
+  <!-- Extras -->
+
+
+</robot>
